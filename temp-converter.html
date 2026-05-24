@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoFadi — Temp Converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="tempPage">
+    <div class="main-body">
+
+        <header>
+            <div class="header-inner">
+                <span class="wordmark">Mo<span>.</span>com</span>
+                <nav>
+                    <ul class="nav-bar" id="nav-bar">
+                        <li><a href="./index.html">Profile</a></li>
+                        <li><a href="./mark-grade.html">Mark Grade</a></li>
+                        <li><a href="./temp-converter.html" class="active">Temp Converter</a></li>
+                        <li><a href="./staff-page.html">Staff</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-item" id="menu-btn" aria-label="Toggle navigation">
+                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="temp-page">
+
+                <div class="page-header">
+                    <span class="section-label">Tool</span>
+                    <h1 class="section-title">Temperature<br>Converter</h1>
+                </div>
+
+                <div class="temp-card">
+
+                    <!-- Unit selection + input -->
+                    <div class="temp-input-zone">
+                        <span class="temp-field-label">Select input unit</span>
+                        <div class="temp-unit-row">
+                            <button class="unit-btn celsius" data-unit="c">°C Celsius</button>
+                            <button class="unit-btn fahrenheight" data-unit="f">°F Fahrenheit</button>
+                            <button class="unit-btn kelvin" data-unit="k">K Kelvin</button>
+                        </div>
+
+                        <div class="temp-field-wrap">
+                            <span class="temp-field-label">
+                                Enter value
+                                <span class="current-unit" id="current-unit-label"></span>
+                            </span>
+                            <input
+                                type="text"
+                                id="temp-input"
+                                placeholder="e.g. 100"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <p class="error-hint" id="temp-error"></p>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="temp-results-zone">
+                        <span class="results-label">Converted to</span>
+                        <div class="result-rows">
+                            <div class="result-row" id="result-row-1">
+                                <span class="result-unit-label first-unit">—</span>
+                                <span class="result-value first-value">—</span>
+                            </div>
+                            <div class="result-row" id="result-row-2">
+                                <span class="result-unit-label second-unit">—</span>
+                                <span class="result-value second-value">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <strong>Mo Fadi</strong> &nbsp;·&nbsp; <span id="setDate"></span></p>
+        </footer>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

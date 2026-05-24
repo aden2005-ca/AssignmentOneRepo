@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoFad — Staff</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="staffPage">
+    <div class="main-body">
+
+        <header>
+            <div class="header-inner">
+                <span class="wordmark">Mo<span>.</span>com</span>
+                <nav>
+                    <ul class="nav-bar" id="nav-bar">
+                        <li><a href="./index.html">Profile</a></li>
+                        <li><a href="./mark-grade.html">Mark Grade</a></li>
+                        <li><a href="./temp-converter.html">Temp Converter</a></li>
+                        <li><a href="./staff-page.html" class="active">Staff</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-item" id="menu-btn" aria-label="Toggle navigation">
+                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="staff-page">
+
+                <div class="staff-controls">
+                    <div>
+                        <span class="section-label">Directory</span>
+                        <span class="staff-count" id="staff-count"></span>
+                    </div>
+
+                    <!-- Sort controls -->
+                    <div class="sort-buttons">
+                        <!-- Sort by name -->
+                        <div class="sort-btn-wrap">
+                            <button class="sort-btn" id="name">
+                                Name
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <ul class="dd-menu" id="dd-name">
+                                <li class="asc">↑ A → Z</li>
+                                <li class="desc">↓ Z → A</li>
+                            </ul>
+                        </div>
+
+                        <!-- Sort by salary -->
+                        <div class="sort-btn-wrap">
+                            <button class="sort-btn" id="salary">
+                                Salary
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </button>
+                            <ul class="dd-menu" id="dd-salary">
+                                <li class="asc">↑ Low → High</li>
+                                <li class="desc">↓ High → Low</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards injected by JS -->
+                <div class="staff-grid" id="staff-organize"></div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <strong>Mo Fadi</strong> &nbsp;·&nbsp; <span id="setDate"></span></p>
+        </footer>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

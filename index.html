@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoFadi — Profile</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body data-page="profile">
+    <div class="main-body">
+
+        <header>
+            <div class="header-inner">
+                <span class="wordmark">Mo<span>.</span>com</span>
+                <nav>
+                    <ul class="nav-bar" id="nav-bar">
+                        <li><a href="./index.html" class="active">Profile</a></li>
+                        <li><a href="./mark-grade.html">Mark Grade</a></li>
+                        <li><a href="./temp-converter.html">Temp Converter</a></li>
+                        <li><a href="./staff-page.html">Staff</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-item" id="menu-btn" aria-label="Toggle navigation">
+                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                        viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="profile-page">
+
+                <!-- Left: portrait -->
+                <div class="profile-portrait-col">
+                    <div class="portrait-frame">
+                        <!-- Placeholder shown while image waits to appear -->
+                        <div class="portrait-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <!-- Image reveals after 10s via CSS transition-delay -->
+                        <img src="./my-pic.jpg" alt="Profile photo" id="profile-image" />
+                    </div>
+                </div>
+
+                <!-- Right: bio -->
+                <div class="profile-bio-col">
+                    <span class="profile-handle">@mohammedfadi</span>
+                    <h1 class="profile-name">Mo<br><em>Fadi</em></h1>
+
+                    <div class="profile-bio">
+                        <p>
+                            I'm a software developer based in Calgary — though honestly,
+                            I'd rather be in the kitchen. I write code, but my heart's in
+                            slow-cooked food, history books, and games I never finish.
+                        </p>
+                        <p>
+                            When I'm not <strong>WRITING CODE</strong> I'm deep in an RPG I swore I'd
+                            complete last year, or reading about why the Abbasid Caliphate
+                            was the peak of human civilization. I stand by that.
+                        </p>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="profile-actions">
+                        <button class="btn btn-primary">Follow</button>
+                        <button class="btn btn-outline">View Work</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <strong>Mo Fadi</strong> &nbsp;·&nbsp; <span id="setDate"></span></p>
+        </footer>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

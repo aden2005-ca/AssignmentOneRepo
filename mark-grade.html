@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoFadi — Mark Grade</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="markGrade">
+    <div class="main-body">
+
+        <header>
+            <div class="header-inner">
+                <span class="wordmark">Mo<span>.</span>com</span>
+                <nav>
+                    <ul class="nav-bar" id="nav-bar">
+                        <li><a href="./index.html">Profile</a></li>
+                        <li><a href="./mark-grade.html" class="active">Mark Grade</a></li>
+                        <li><a href="./temp-converter.html">Temp Converter</a></li>
+                        <li><a href="./staff-page.html">Staff</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-item" id="menu-btn" aria-label="Toggle navigation">
+                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="grade-page">
+
+                <div class="page-header">
+                    <span class="section-label">Tool</span>
+                    <h1 class="section-title">Mark to Grade</h1>
+                </div>
+
+                <!-- Input card -->
+                <div class="grade-input-card">
+                    <label for="grade-input" class="section-label">Enter your score</label>
+                    <div class="input-row">
+                        <input
+                            type="text"
+                            id="grade-input"
+                            class="grade-input"
+                            placeholder="0 – 100"
+                            autocomplete="off"
+                        />
+                        <button class="btn-calculate" id="calculate-btn">Calculate</button>
+                    </div>
+                    <p class="error-message" id="validation-message"></p>
+                </div>
+
+                <!-- Result card -->
+                <div class="grade-result-card">
+                    <div class="gauge-wrap">
+                        <svg class="gauge-svg" viewBox="0 0 140 140">
+                            <!-- Full circle track -->
+                            <circle class="gauge-track" cx="70" cy="70" r="58"/>
+                            <!-- Animated fill arc -->
+                            <circle class="gauge-fill" id="gauge-arc" cx="70" cy="70" r="58"/>
+                        </svg>
+                        <div class="gauge-center">
+                            <span class="gauge-score" id="currentScore">0</span>
+                            <span class="gauge-pct">/ 100</span>
+                        </div>
+                    </div>
+
+                    <div class="grade-letter-display">
+                        <div class="grade-letter" id="grade">—</div>
+                        <div class="grade-descriptor" id="grade-descriptor">Awaiting input</div>
+                    </div>
+                </div>
+
+                <!-- Grade scale legend -->
+                <div class="grade-scale" id="grade-scale">
+                    <div class="scale-item" data-grade="A">
+                        <span class="scale-letter">A</span>
+                        <span class="scale-range">90–100</span>
+                    </div>
+                    <div class="scale-item" data-grade="B">
+                        <span class="scale-letter">B</span>
+                        <span class="scale-range">80–89</span>
+                    </div>
+                    <div class="scale-item" data-grade="C">
+                        <span class="scale-letter">C</span>
+                        <span class="scale-range">70–79</span>
+                    </div>
+                    <div class="scale-item" data-grade="D">
+                        <span class="scale-letter">D</span>
+                        <span class="scale-range">60–69</span>
+                    </div>
+                    <div class="scale-item" data-grade="E">
+                        <span class="scale-letter">E</span>
+                        <span class="scale-range">50–59</span>
+                    </div>
+                    <div class="scale-item" data-grade="F">
+                        <span class="scale-letter">F</span>
+                        <span class="scale-range">0–49</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <strong>Mo Fadi</strong> &nbsp;·&nbsp; <span id="setDate"></span></p>
+        </footer>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
